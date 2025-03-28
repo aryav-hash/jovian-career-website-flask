@@ -10,6 +10,8 @@
     #banner {
       width: 100%;
       height: 360px;
+      object-fit: cover;
+      margin-bottom: 16px;
     }
   </style>
 </head>
@@ -17,9 +19,20 @@
   {% include 'nav.html' %}
   <div class="container">
   <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
-  <img src="https://github.com/aryav-hash/jovian-career-website-flask/blob/main/static/AnImage.jpeg?raw=true" id="banner" class="img-fluid">  
+  <img src="/static/AnImage.jpeg" id="banner" class="img-fluid">  
   <h2 class="text-center mt-2 mb-4">About Jovian</h2>
-  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div class="row">
+    <div class="col-6">
+  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+    <div class="col-6">
+    <img src="/static/luffyGear5.jpeg" style="height: 320px;">
+  </div>
+</div>
   <h2 class="text-center mt-2 mb-4">Open Positions</h2>
   <div>
     {% for job in jobs %}
